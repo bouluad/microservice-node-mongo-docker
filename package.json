@@ -1,0 +1,42 @@
+{
+  "name": "docker-compose-node-mongo",
+  "version": "0.0.1",
+  "description": "Learning how to compose Docker containers to run a Node mongoDB API.",
+  "main": "src/api.js",
+  "scripts": {
+    "lint": "eslint --color src --ext *.js*",
+	"test:integration": "docker-compose up",
+    "start:dev": "DEBUG=dcnm:* nodemon src/start.js",
+    "start": "node src/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bouluad/node-mongo.git"
+  },
+  "keywords": [
+    "docker",
+    "docker-compose",
+    "node",
+    "mongo"
+  ],
+  "author": "BOULUAD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bouluad/node-mongo/issues"
+  },
+  "homepage": "https://github.com/bouluad/node-mongo#readme",
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "eslint": "^3.0.1",
+    "eslint-config-danistyle": "0.0.4",
+    "nodemon": "^1.9.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "co": "^4.6.0",
+    "cors": "^2.7.1",
+    "express": "^4.16.1",
+    "mongodb": "^2.1.8",
+    "statuses": "^1.3.0"
+  }
+}

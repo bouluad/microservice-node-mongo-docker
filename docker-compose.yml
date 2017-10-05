@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  api:
+    image: nodeapi:1.0
+    volumes:
+      - ./:/usr/src/api
+    ports:
+      - "8888:8888"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
