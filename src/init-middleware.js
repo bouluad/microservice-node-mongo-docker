@@ -26,7 +26,7 @@ function initMiddleware(app, db) {
 
 	app.get('/status', function getStatus(req, res) {
 		res.jsonp({
-			status: 'ok',
+			status: 'Microservice users running',
 			version: pjson.version
 		});
 	});

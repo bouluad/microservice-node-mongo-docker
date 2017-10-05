@@ -4,6 +4,7 @@ services:
     image: nodeapi:1.0
     volumes:
       - ./:/usr/src/api
+      - /usr/src/api/node_modules
     ports:
       - "8888:8888"
     depends_on:
